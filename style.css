@@ -106,3 +106,46 @@ footer{
     border-top:1px solid #333;
     margin-top:50px;
 }
+.hero{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+    padding:40px 20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#161b22,#0d1117);
+    border:2px solid #00ff88;
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(0,255,136,.5);
+}
+
+.paypal,
+.stripe{
+    width:100%;
+    margin-top:10px;
+    padding:14px;
+    font-size:17px;
+    font-weight:bold;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.paypal{
+    background:#0070ba;
+    color:#fff;
+}
+
+.stripe{
+    background:#635bff;
+    color:#fff;
+}
