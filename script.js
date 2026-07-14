@@ -1,5 +1,5 @@
 function buyAnalysis(){
 
-    alert("Payment page will open soon.");
+    window.location.href = "payment.html";
 
 }
