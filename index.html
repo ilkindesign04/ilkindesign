@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ILKIN DESIGN</title>
+<title>Ilkin Design | Premium Logo Store</title>
 
 <style>
 body{
@@ -11,66 +11,21 @@ body{
     font-family:Arial,sans-serif;
     background:#111;
     color:white;
-    text-align:center;
 }
+
 header{
     background:#000;
     padding:20px;
+    text-align:center;
 }
-h1{
+
+header h1{
     color:#FFD700;
+    margin:0;
 }
-.hero{
-    padding:80px 20px;
-}
-.btn{
-    display:inline-block;
-    background:#FFD700;
-    color:black;
-    padding:15px 30px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-footer{
-    margin-top:60px;
-    padding:20px;
-    background:#000;
-}
-</style>
 
-</head>
-<body>
-
-<header>
-<h1>IILKIN DIGITAL STORE</h1>
-</header>
-
-<div class="hero">
-<h2>Premium Digital Products</h2>
-<p>Professional Logos, Branding & Digital Assets</p>
-
-<a class="btn" href="#">Shop Now</a>
-</div>
-
-<footer>
-© 2026 Ilkin Design. All Rights Reserved.
-</footer>
-
-</body>
-</html>
-<header>
-    <h1>Ilkin Design</h1>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
 nav{
-    margin-top:20px;
+    margin-top:15px;
 }
 
 nav a{
@@ -83,3 +38,109 @@ nav a{
 nav a:hover{
     color:#FFD700;
 }
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#FFD700;
+    color:black;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.card{
+    background:#222;
+    width:250px;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#FFD700;
+}
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Ilkin Design</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Premium Digital Products</h2>
+<p>Professional Logos, Branding & Digital Assets</p>
+
+<a class="btn" href="#">Shop Now</a>
+</section>
+
+<section class="products">
+
+<div class="card">
+<img src="https://via.placeholder.com/250x180" alt="">
+<h3>Minimal Logo</h3>
+<p>$10</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/250x180" alt="">
+<h3>Business Logo</h3>
+<p>$15</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/250x180" alt="">
+<h3>Modern Logo</h3>
+<p>$20</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Ilkin Design. All Rights Reserved.
+</footer>
+
+</body>
+</html>
