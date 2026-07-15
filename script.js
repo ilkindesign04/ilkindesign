@@ -1,31 +1,44 @@
-fetch("games/today.json")
-  .then(response => response.json())
-  .then(data => {
+import { db } from "./firebase.js";
 
-    const hero = document.querySelector(".hero");
+import {
+  collection,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-    hero.innerHTML = "<h2>⚽ Günün Oyunları</h2>";
+const hero = document.querySelector(".hero");
 
-    data.games.forEach(game => {
+hero.innerHTML = "<h2>⚽ Günün Oyunları</h2>";
 
-      hero.innerHTML += `
-        <div class="card">
-          <h3>${game.match}</h3>
+async function loadGames() {
 
-          <p><strong>Tarix:</strong> ${game.date}</p>
+  const querySnapshot = await getDocs(collection(db, "games"));
 
-          <p><strong>Əmsal:</strong> ${game.odds}</p>
+  querySnapshot.forEach((doc) => {
 
-          <p><strong>Qiymət:</strong> ${game.price}</p>
+    const game = doc.data();
 
-          <p><strong>Təxmin:</strong> 🔒 Gizlidir</p>
+    hero.innerHTML += `
+      <div class="card">
 
-          <button class="paypal">PayPal ilə al</button>
+        <h3>${game.match}</h3>
 
-          <button class="stripe">Stripe ilə al</button>
-        </div>
-      `;
+        <p><strong>Tarix:</strong> ${game.date}</p>
 
-    });
+        <p><strong>Əmsal:</strong> ${game.odds}</p>
+
+        <p><strong>Qiymət:</strong> ${game.price}</p>
+
+        <p><strong>Təxmin:</strong> 🔒 Gizlidir</p>
+
+        <button class="paypal">PayPal ilə al</button>
+
+        <button class="stripe">Stripe ilə al</button>
+
+      </div>
+    `;
 
   });
+
+}
+
+loadGames();
